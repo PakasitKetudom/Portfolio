@@ -1,29 +1,129 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<style>
+    .logo {
+        line-height: 60px;
+        position: fixed;
+        float: left;
+        margin: 16px 46px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    nav {
+        position: fixed;
+        width: 100%;
+        line-height: 60px;
+        z-index: 9999 !important;
+    }
+    
+    nav ul {
+        line-height: 60px;
+        list-style: none;
+        background: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        color: #fff;
+        padding: 0;
+        text-align: right;
+        margin: 0;
+        padding-right: 40px;
+        transition: 1s;
+    }
+    
+    nav.black ul {
+        background: #000;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        padding: 16px 40px;
+        ;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    .menu-icon {
+        line-height: 60px;
+        width: 100%;
+        background: #000;
+        text-align: right;
+        box-sizing: border-box;
+        padding: 15px 24px;
+        cursor: pointer;
+        color: #fff;
+        display: none;
+    }
+    
+    /* @media(max-width: 786px) {
+        .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+        }
+        nav ul {
+            max-height: 0px;
+            background: #000;
+        }
+        nav.black ul {
+            background: #000;
+        }
+        .showing {
+            max-height: 34em;
+        }
+        nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+        }
+    } */
+</style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+<script>
+    $(document).ready(function() {
+        $(".menu-icon").on("click", function() {
+            $("nav ul").toggleClass("showing");
+        });
+    });
+
+    // Scrolling Effect
+
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+            $('nav').addClass('black');
+        } else {
+            $('nav').removeClass('black');
+        }
+    })
+</script>
+
+<nav>
+    <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
     </div>
-  </nav>
+    <div class="logo">
+        LOGO
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutme">About me</a></li>
+            <li><a href="/education">Education</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
