@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var aboutmeRouter = require('./routes/aboutme');
 var educationRouter  = require('./routes/education');
+var portfolioRouter = require('./routes/portfolio');
 var app = express();
 
 //bootstrap
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/aboutme', aboutmeRouter);
 app.use('/education', educationRouter);
+app.use('/portfolio', portfolioRouter);
 
 
 // catch 404 and forward to error handler

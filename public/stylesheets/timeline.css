@@ -14,7 +14,7 @@ html {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-color: #111;
+  /* background-color: #111; */
 }
 .timeline {
   width: 80%;
@@ -29,7 +29,7 @@ html {
 }
 .timeline ul li {
   padding: 20px;
-  background-color: #1e1f22;
+  background-color: #848485;
   color: white;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -45,7 +45,8 @@ html {
   text-align: center;
 }
 .timeline-content p {
-  font-size: 16px;
+  padding-top: 10px;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 300;
   text-align: center;

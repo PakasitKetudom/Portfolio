@@ -2,43 +2,95 @@
 <html>
 
 <head>
-    <title>
-        <%= title %>
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/timeline.css' />
-    
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/timeline.css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<style>
+  img:hover {
+    animation: shake 0.7s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+</style>
 
 <body>
-    <%- include navbar %>
+  <%- include navbar %>
     <div class="education">
-        <div class="col-md-12" style="padding-top:90px;">
-            <div class="contenttime">
-                <div class="timeline">
-                  <ul>
-                    <li>
-                      <div class="timeline-content">
-                        <h3 class="date">2012 - 2015</h3>
-                        <h1>Ratwinit Bangkaeo School</h1>
-                        <img src="/images/TNI_Logo.jpg" class="imgEducation mx-auto d-block" width="60%" height="50%">
-                        <p>Science - Mathematics (GPA 3.12)</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="timeline-content">
-                        <h3 class="date">2015 - 2019</h3>
-                        <h1>Thai-Nichi Institute of Technology</h1>
-                        <img src="/images/RWB_Logo.jpg" class="imgEducation mx-auto d-block" width="50%" height="50%">
-                        <p>Information Technology (GPA 3.17)</p>
-                      </div>
-                    </li>
-                  </ul>
+      <div class="col-md-12" style="padding-top:90px;">
+        <div class="contenttime">
+          <div class="timeline">
+            <ul>
+              <li>
+                <div class="timeline-content">
+                  <h3 class="date">2012 - 2015</h3>
+                  <h1>Ratwinit Bangkaeo School</h1>
+                  <img src="/images/RWB_Logo.jpg" class="imgEducation mx-auto d-block" width="60%" height="50%">
+                  <p>Science - Mathematics (GPA 3.12)</p>
                 </div>
-              </div>
-              
+              </li>
+              <li>
+                <div class="timeline-content">
+                  <h3 class="date">2015 - 2019</h3>
+                  <h1>Thai-Nichi Institute of Technology</h1>
+                  <img src="/images/TNI_Logo.jpg" class="imgEducation mx-auto d-block" width="50%" height="50%">
+                  <p>Information Technology (GPA 3.17)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
 </body>
+<%- //include loading %>
 
 </html>
