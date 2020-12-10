@@ -107,6 +107,6 @@ html {
     top: -30px;
   }
   .timeline ul li:hover::before {
-    background-color: aqua;
+    background-color: rgb(68, 68, 68);
   }
 }
